@@ -1,19 +1,38 @@
-const express =require("express")
-const htmlRoute=require("./routes/htmlRoutes")
-const apiRoute=require("./routes/apiRoutes")
-const PORT= process.env.PORT || 3001
 
-const app= express()
+const PORT = process.env.PORT || 3306;
 
-app.use(express.static("public"))
+const express = require('express');
+const app = express();
 
-app.use(express.urlencoded({extended:true}))
-app.use(express.json())
 
-app.use(apiRoute)
+const fs = require('fs');
+const path = require('path');
 
-app.use(htmlRoute)
 
-app.listen(PORT,()=>{
-    console.log("App is listening on Port http://localhost:"+ PORT)
-})
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
+
+
+app.use(express.urlencoded({
+    extended: true
+}));
+
+app.use(express.static('public'));
+app.use(express.json());
+
+
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
+
+
+app.listen(PORT, () => {
+    
+    console.log(`API server now on port ${PORT}!`);
+});
+
+
+//node server.js
+//npm install -g nodemon then nodemon server.js
+//i prefer running my programs with Nodemon file.js so that i don't have to exit and restart the server
+//you can use control c to exit the process at anytime (that is on a mac it may vary for other systems)
