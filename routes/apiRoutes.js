@@ -1,19 +1,10 @@
-const router=require("express").Router()
-const fs=require("fs")
-const db=require("../db/db.json")
-
-router.get("/api/notes",(req,res)=>{
-     res.json(db)
-})
+const router = require('express').Router();
+const notesRoutes = require('./noteRoutes')
+router.use(notesRoutes);
 
 
-router.post("/api/notes", (req, res)=>{
 
-    console.log(req.body)
+module.exports = router;
 
-    //db is array, think about array function to add new element or value of an array
-    //think about update the revised db with new data into the db.json file
-    
-})
-
-module.exports=router
+//you have to have express -npm install express
+//https://www.npmjs.com/package/express
