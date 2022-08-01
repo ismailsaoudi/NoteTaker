@@ -26,6 +26,6 @@ require("./routes/html.routes")(app);
 
 // LISTENER
 app.listen(PORT, () =>
-  console.log(`Express server running, Access the web App using https://Localhost:${PORT}`)
+  console.log(`Express server running, Access the web App using http://Localhost:${PORT}`)
  
 );
