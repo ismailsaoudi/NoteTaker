@@ -1,38 +1,31 @@
+// DEPENDENCIES
+// Series of npm packages that we will use to give our server useful functionality
+const express = require("express");
 
-const PORT = process.env.PORT || 3306;
-
-const express = require('express');
+// EXPRESS CONFIGURATION
+// This sets up the basic properties for our express server
+// Tells node that we are creating an "express" server
 const app = express();
 
+// Sets an initial port. We"ll use this later in our listener
+const PORT = process.env.PORT || 8080;
 
-const fs = require('fs');
-const path = require('path');
-
-
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
-
-
-
-app.use(express.urlencoded({
-    extended: true
-}));
-
-app.use(express.static('public'));
+// MIDDLEWARE
+// Sets up the Express app to handle data parsing for POST and PUT requests, because in both these requests you are sending data to the server and you are asking the server to accept or store that data.
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Sets up the Express app to serve static files
+app.use(express.static("public"));
 
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+// ROUTER
+// The below points our server to a series of "route" files.
+require("./routes/api.routes")(app);
+require("./routes/html.routes")(app);
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 
-
-app.listen(PORT, () => {
-    
-    console.log(`API server now on port ${PORT}!`);
-});
-
-
-//node server.js
-//npm install -g nodemon then nodemon server.js
-//i prefer running my programs with Nodemon file.js so that i don't have to exit and restart the server
-//you can use control c to exit the process at anytime (that is on a mac it may vary for other systems)
+// LISTENER
+app.listen(PORT, () =>
+  console.log(`Express server running, Access the web App using https://Localhost:${PORT}`)
+ 
+);

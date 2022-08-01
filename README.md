@@ -1,29 +1,73 @@
-# Note Taker Express JS Application
+# Note Taker Express.js Application
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-This application was made with Express js and deployed using Heroku. It was tested locally before starting the steps to deploy the final product on Heroku.
-Notetaker is a simple notetaking application. When the user first enters the initial page, you see a button that says get started. When I click on the button, it takes me to the notes page, where a user can create, read, update and delete notes, following the CRUD method. To run this application locally, navigate to the js file and open it in the integrated terminal. Start by running NPM I and then npm start. A message will be received saying that the server is being listened to on port 3306.
-In your browser, type <http://localhost:3306/>. The view from the browser should show the application on your local machine. Then once my application looked good, it was deployed to Heroku. In the code, there are comments through the project to help other developers understand what is there and how it operates.
+This application can be used to write and save notes, allowing the user to better organize their thoughts and keep track of the tasks they need to complete. This application uses an Express.js back end to save and retrieve note data from a JSON file.
 
-## Screenshot
-<img width="1230" alt="Screen Shot 2021-09-13 at 11 13 05 AM" src="https://user-images.githubusercontent.com/85209802/133151808-f4a8081b-bebb-43ad-b20a-d177677ca60e.png">
-<img width="1230" alt="Screen Shot 2021-09-13 at 11 13 34 AM" src="https://user-images.githubusercontent.com/85209802/133151830-c0a592a2-ca39-43f1-86bd-e432e0bee7e2.png">
+### How it works
 
-## Application Link
+The following steps explain how this "Note Taker" application works:
 
-<https://heroku>
-Walk through video -youtube <https:>
-<http://localhost:3306/>
+1. When a user opens the Note Taker, they are presented with a landing page containing a link to a notes page.
+2. When the user clicks on the link to the notes page, they're presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note's text in the right-hand column.
+3. When the user enters a new note title and the note's text, a save icon appears in the navigation at the top of the page.
+4. When the user clicks on the save icon, the new note they've entered is saved and appears in the left-hand column with the other existing notes.
+5. When the user clicks on an existing note in the list in the left-hand column, that note appears in the right-hand column.
+6. When the user clicks on the write icon in the navigation at the top of the page, they're presented with empty fields to enter a new note and the note's text in the right-hand column.
 
+## Mock-Up
 
-## Contribute to the Project
+The following images show the web application's appearance and functionality:
+![Demo Gif of Note Taker App](./public/assets/images/demo_gif.gif)
 
-Contact me to make contributions to the project
+## Table of Contents
 
-## Contact Information
+- [**Installation**](#installation)
+- [**Usage**](#usage)
+- [**Credits**](#credits)
+- [**License**](#license)
+- [**Contributing**](#contributing)
+- [**Questions**](#questions)
 
-Find me on GitHub Samantha Peterson @CodingAndDesign
-<https://github.com/ismailsaoudi>
-On Linkedin
-<https://www.linkedin.com/in/ismailsaoudi>
+# Installation
+
+This app uses an Express.js back end to save and retrieve note data from a JSON file. [**Node.js**](https://nodejs.org/en/download/), which is a run-time environment which includes everything you need to execute a program written in JavaScript. If haven't downloaded the [**Node.js**](https://nodejs.org/en/download/) source code or a pre-built installer for your platform, you will need to do so using this [**link**](https://nodejs.org/en/download/).
+
+The dependencies required for this project are:
+
+- [**Express**](https://expressjs.com/) is the most widely used Node.js server framework, this allows us to create our own server-side APIs.
+
+- [**Generate Unique ID**](https://www.npmjs.com/package/generate-unique-id) is used to generate a unique random ID string because each note needs a unique id when it's saved into our database.
+
+To initialize your project and install these required dependencies, open a command prompt at the project's directory and run:
+
+```
+npm init -y  // initialize the project with NPM
+npm install express  // for express dependencies
+npm install generate-unique-id  // for generate unique id dependencies
+```
+
+## Usage
+
+Click [**here**](https://note-taking-planner.herokuapp.com/) to view deployed application on Heroku.
+
+## Credits
+
+The application's front end was provided. To give the application its CRUD (create, read, update, and delete) functionality, I built the bank end, connected the two, and then deployed the entire application to Heroku.
+
+## License
+
+This project is licensed under the [**MIT**](https://opensource.org/licenses/MIT) license.
+
+## Contributing
+
+All comments and suggestions regarding improvements to this project are welcome. To contribute to this project, clone this [**project repository**](https://github.com/kaylamuraoka/Note_Taker_Express_App) locally and commit your code on a separate branch. You may then modify the code to your liking, submit well-formed pull requests and open useful issues. For steps on how to clone a repository using the command line, read this section of the Github Docs [**about cloning a repository**](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository#about-cloning-a-repository).
+
+## Questions
+
+Please use the contact information below if you would like to reach me with any questions.
+
+- Github Profile: [**@ismailsaoudi**](https://github.com/ismailsaoudi)
+- Email: [**ismail.saoudi@icloud.com**]

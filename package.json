@@ -1,15 +1,25 @@
 {
-  "name": "note-taker",
+  "name": "Note_Taker_Express_App",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "IsmailSaoudi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaylamuraoka/Note_Taker_Express_App.git"
+  },
+  "keywords": [],
+  "author": "Kayla Muraoka",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaylamuraoka/Note_Taker_Express_App/issues"
+  },
+  "homepage": "https://github.com/kaylamuraoka/Note_Taker_Express_App#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "pumpify": "^2.0.1"
+    "express": "^4.17.1",
+    "generate-unique-id": "^2.0.1",
+    "nodemon": "^2.0.6"
   }
 }

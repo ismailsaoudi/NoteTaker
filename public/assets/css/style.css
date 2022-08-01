@@ -60,11 +60,6 @@ body {
   border-top-left-radius: 0;
 }
 
-.list-item-title {
-  display: inline-block;
-  width: 75%;
-}
-
 .list-container i {
   font-size: 1.1rem;
   cursor: pointer;
@@ -75,4 +70,9 @@ body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+}
+
+.penStyle {
+  padding-right: 10px;
+  color: lightseagreen !important;
 }
